@@ -8,6 +8,10 @@
     <label for="api_key">API Key:</label>
 	  <input type="text" id="api_key" />
 
+    <label for="model">Model:</label>
+	  <input type="text" id="model" />
+    <p>可选model:  ada:ft-personal-2023-04-19-01-36-47 </p>
+
     <label for="input">Enter text:</label>
     <input type="text" id="input" />
     <button onclick="submit()">Submit</button>
@@ -16,7 +20,7 @@
     <script>
       async function submit() {
         const apiKey = document.getElementById("api_key").value;
-        const model = "ada:ft-personal-2023-04-19-01-36-47";
+        const model = document.getElementById("model").value;
         const input = document.getElementById("input").value;
 
         const response = await fetch(
