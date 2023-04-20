@@ -5,6 +5,9 @@
   </head>
   <body>
     <h1>OpenAI API demo</h1>
+    <label for="api_key">API Key:</label>
+	  <input type="text" id="api_key" />
+
     <label for="input">Enter text:</label>
     <input type="text" id="input" />
     <button onclick="submit()">Submit</button>
@@ -12,7 +15,7 @@
 
     <script>
       async function submit() {
-        const apiKey = "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"; // 在此处填写您的OpenAI API密钥
+        const apiKey = document.getElementById("api_key").value;
         const model = "text-davinci-003";
         const input = document.getElementById("input").value;
 
