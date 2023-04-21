@@ -32,7 +32,7 @@
               Authorization: "Bearer " + apiKey,
             },
             body: JSON.stringify({
-              prompt: input,
+              prompt: input + "###",
               max_tokens: 200,
               model: model,
               stop: "\nEND"
