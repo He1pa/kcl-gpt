@@ -10,7 +10,7 @@
 
     <label for="model">Model:</label>
 	  <input type="text" id="model" />
-    <p>可选model:  ada:ft-personal-2023-04-19-01-36-47 </p>
+    <p>当前 model:  davinci:ft-personal-2023-04-20-23-35-01 </p>
 
     <label for="input">Enter text:</label>
     <input type="text" id="input" />
@@ -35,6 +35,7 @@
               prompt: input,
               max_tokens: 200,
               model: model,
+              stop: "\nEND"
 
             }),
           }
